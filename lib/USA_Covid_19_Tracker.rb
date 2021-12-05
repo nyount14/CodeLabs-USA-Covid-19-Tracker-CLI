@@ -7,3 +7,5 @@ end
 
 
 require_relative "USA_Covid_19_Tracker/cli.rb"
+require_relative "./country.rb"
+require_relative "./state.rb"
