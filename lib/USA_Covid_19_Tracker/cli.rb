@@ -1,12 +1,28 @@
 class CLI
     def run
         system('clear')
+        CRUD.create_secure_users(User.all)
         greeting
-        while menu != 'exit'
+        login
+        while menu != 'exit' 
         end
         end_program
     end
 
+    def login
+        authenticated = false
+        while authenticated != true
+            puts "Please login"
+            puts "What is your username?"
+            username = gets.chomp.downcase
+            puts "What is your password?"
+            password = gets.chomp.downcase
+            if CRUD.authenticate_user(username, password, User.all)
+                authenticated = true
+            end
+        end
+    end
+    
     def greeting
         puts "Welcome to the Covid-19 CLI Tracker!"
     end

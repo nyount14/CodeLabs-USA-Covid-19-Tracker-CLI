@@ -1,5 +1,3 @@
-
-
 class User 
     @@users = [
         {username: "test", password:"password"}
@@ -9,5 +7,8 @@ class User
     def initialize(username, passsord)
         @username = username
         @password = password
+    end
+    def self.all 
+        return @@users
     end
 end
