@@ -1,5 +1,6 @@
 class CLI
     def run
+        scrape
         system('clear')
         CRUD.create_secure_users(User.all)
         greeting
@@ -56,9 +57,21 @@ class CLI
     def choose_option(option)
         case option
         when "1"
-            puts "Number 1 chosen"
+            State.all.each_with_index do |state, i|
+                puts "#{i+1}. #{state.name}"
+            end
+            
         when "2"
-            puts "Number 2 chosen"
+            states = State.all
+            states.sort {|a,b| a.confirmed_cases <=> b.confirmed_cases}
+            states[1..10].each_with_index do |state, i| 
+              puts "#{i+1}. #{state.name} confirmed cases: #{state.confirmed_cases}"
+            end
         end
+    end
+
+    def scrape
+        Scrapper.scrape_usa
+        Scrapper.scrape_states
     end
 end
