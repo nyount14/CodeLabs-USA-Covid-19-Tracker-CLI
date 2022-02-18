@@ -1,5 +1,5 @@
 ## Getting started
-To execute file cd into project folder, execute `ruby bin/tracker.rb`
+To execute file cd into project folder, execute `ruby bin/tracker`
 
 # USACovid19Tracker
 
