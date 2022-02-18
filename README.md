@@ -1,3 +1,6 @@
+## Getting started
+To execute file cd into project folder, execute `ruby bin/tracker.rb`
+
 # USACovid19Tracker
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/USA_Covid_19_Tracker`. To experiment with that code, run `bin/console` for an interactive prompt.
