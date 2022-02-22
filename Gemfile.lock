@@ -8,6 +8,8 @@ GEM
   specs:
     bcrypt (3.1.16)
     date (3.2.2)
+    nokogiri (1.12.5-x64-mingw32)
+      racc (~> 1.4)
     nokogiri (1.12.5-x86_64-darwin)
       racc (~> 1.4)
     open-uri (0.1.0)
@@ -22,6 +24,7 @@ GEM
     uri (0.11.0)
 
 PLATFORMS
+  x64-mingw32
   x86_64-darwin-20
 
 DEPENDENCIES
